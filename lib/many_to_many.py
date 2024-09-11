@@ -22,9 +22,9 @@ class Book:
 
     def contracts(self):
         return [contract for contract in Contract.all if self == contract.book]
-    # @property
+    
     def authors(self):
-        return self._authors  
+        return [author for author in Author.all]  
     def add_author(self,author):
         if isinstance(author,Author):
             self._authors.append(author)
